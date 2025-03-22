@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogiCommerce.API", "src\LogiCommerce.API\LogiCommerce.API.csproj", "{0BC4725F-5592-490B-9970-27CC00395244}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogiCommerce.Application", "src\LogiCommerce.Application\LogiCommerce.Application.csproj", "{EEBA08E3-57B1-4DDF-B2FD-C8F88A5E2A5C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogiCommerce.Domain", "src\LogiCommerce.Domain\LogiCommerce.Domain.csproj", "{9B4946FF-AF16-4C94-B076-EF9004D7CA3B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{224C0641-8468-4D5D-92E7-0C36CACD2702}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogiCommerce.Infrastructure.EFCore", "LogiCommerce.Infrastructure.EFCore\LogiCommerce.Infrastructure.EFCore.csproj", "{4B006BCD-C549-44FB-A43A-C5CA2D65B414}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0BC4725F-5592-490B-9970-27CC00395244}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BC4725F-5592-490B-9970-27CC00395244}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BC4725F-5592-490B-9970-27CC00395244}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BC4725F-5592-490B-9970-27CC00395244}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EEBA08E3-57B1-4DDF-B2FD-C8F88A5E2A5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEBA08E3-57B1-4DDF-B2FD-C8F88A5E2A5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEBA08E3-57B1-4DDF-B2FD-C8F88A5E2A5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEBA08E3-57B1-4DDF-B2FD-C8F88A5E2A5C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B4946FF-AF16-4C94-B076-EF9004D7CA3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B4946FF-AF16-4C94-B076-EF9004D7CA3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B4946FF-AF16-4C94-B076-EF9004D7CA3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B4946FF-AF16-4C94-B076-EF9004D7CA3B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B006BCD-C549-44FB-A43A-C5CA2D65B414}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B006BCD-C549-44FB-A43A-C5CA2D65B414}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B006BCD-C549-44FB-A43A-C5CA2D65B414}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B006BCD-C549-44FB-A43A-C5CA2D65B414}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4B006BCD-C549-44FB-A43A-C5CA2D65B414} = {224C0641-8468-4D5D-92E7-0C36CACD2702}
+	EndGlobalSection
+EndGlobal
