@@ -10,6 +10,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastru
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogiCommerce.Infrastructure.EFCore", "LogiCommerce.Infrastructure.EFCore\LogiCommerce.Infrastructure.EFCore.csproj", "{4B006BCD-C549-44FB-A43A-C5CA2D65B414}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{732606FF-1EDA-42CA-B814-0E6809D073E0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogiCommerce.SharedKernel", "src\LogiCommerce.SharedKernel\LogiCommerce.SharedKernel.csproj", "{BA1464BB-625B-45DA-BCF2-A4F11B4D051B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,6 +36,10 @@ Global
 		{4B006BCD-C549-44FB-A43A-C5CA2D65B414}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4B006BCD-C549-44FB-A43A-C5CA2D65B414}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4B006BCD-C549-44FB-A43A-C5CA2D65B414}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA1464BB-625B-45DA-BCF2-A4F11B4D051B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA1464BB-625B-45DA-BCF2-A4F11B4D051B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA1464BB-625B-45DA-BCF2-A4F11B4D051B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA1464BB-625B-45DA-BCF2-A4F11B4D051B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{4B006BCD-C549-44FB-A43A-C5CA2D65B414} = {224C0641-8468-4D5D-92E7-0C36CACD2702}
