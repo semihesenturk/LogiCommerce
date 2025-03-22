@@ -8,7 +8,6 @@
 
     <ItemGroup>
       <Folder Include="AggregateModels\CategoryAggregate\Specification\" />
-      <Folder Include="AggregateModels\ProductAggregate\Specification\" />
     </ItemGroup>
 
     <ItemGroup>
