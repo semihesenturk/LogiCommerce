@@ -13,6 +13,7 @@ builder.Services.AddDbContext<LogiCommerceDbContext>(options =>
 
 //DI Injections
 builder.Services.AddScoped(typeof(IRepository<>), typeof(RepositoryBase<>));
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
 
 builder.Services.AddControllers();
