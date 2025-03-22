@@ -7,15 +7,14 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
         <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.3"/>
-    </ItemGroup>
-
-    <ItemGroup>
-      <Folder Include="Controllers\" />
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="8.0.0" />
     </ItemGroup>
 
     <ItemGroup>
       <ProjectReference Include="..\..\LogiCommerce.Infrastructure.EFCore\LogiCommerce.Infrastructure.EFCore.csproj" />
+      <ProjectReference Include="..\LogiCommerce.Application\LogiCommerce.Application.csproj" />
     </ItemGroup>
 
 </Project>
