@@ -21,7 +21,7 @@ public class CreateProductCommandHandler(IProductRepository productRepository) :
 
         return result == 0
             ? BaseServiceResponse<CreateProductCommandDto>.Success(
-                new CreateProductCommandDto { Id = 0, Result = false }, 500)
+                new CreateProductCommandDto { Id = Guid.Empty, Result = false }, 500)
             : BaseServiceResponse<CreateProductCommandDto>.Success(
                 new CreateProductCommandDto { Id = product.Id, Result = true }, 200);
     }

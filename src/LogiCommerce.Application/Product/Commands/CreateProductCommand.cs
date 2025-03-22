@@ -8,5 +8,5 @@ public class CreateProductCommand : IRequest<BaseServiceResponse<CreateProductCo
     public string Title { get; set; }
     public string Description { get; set; }
     public int StockQuantity { get; set; }
-    public int CategoryId { get; set; }
+    public Guid CategoryId { get; set; }
 }

@@ -1,5 +1,6 @@
 using LogiCommerce.Domain.AggregateModels.CategoryAggregate;
 using LogiCommerce.Domain.AggregateModels.ProductAggregate;
+using LogiCommerce.Domain.Generics;
 using Microsoft.EntityFrameworkCore;
 
 namespace LogiCommerce.Infrastructure.EFCore;
@@ -15,6 +16,21 @@ public class LogiCommerceDbContext : DbContext
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);
+
+        modelBuilder.Entity<BaseEntity>()
+            .Property(x => x.Id);
+
+        modelBuilder.Entity<BaseEntity>()
+            .Property(x => x.CreatedOn)
+            .HasDefaultValueSql("getutcdate()");
+
+        modelBuilder.Entity<BaseEntity>()
+            .Property(x => x.UpdatedOn)
+            .IsRequired(false); 
+
+        modelBuilder.Entity<BaseEntity>()
+            .Property(x => x.DeletedOn)
+            .IsRequired(false);  
         
         modelBuilder.Entity<Category>()
             .Property(c => c.MinStockLevel)
