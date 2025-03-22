@@ -6,4 +6,14 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+      <PackageReference Include="Ardalis.Specification.EntityFrameworkCore" Version="9.0.1" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="9.0.3" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\src\LogiCommerce.Domain\LogiCommerce.Domain.csproj" />
+      <ProjectReference Include="..\src\LogiCommerce.SharedKernel\LogiCommerce.SharedKernel.csproj" />
+    </ItemGroup>
+
 </Project>
