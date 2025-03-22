@@ -14,4 +14,8 @@
       <Folder Include="Controllers\" />
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\..\LogiCommerce.Infrastructure.EFCore\LogiCommerce.Infrastructure.EFCore.csproj" />
+    </ItemGroup>
+
 </Project>
