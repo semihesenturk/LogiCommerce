@@ -6,4 +6,17 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+      <Folder Include="Product\Queries\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="MediatR" Version="12.4.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\LogiCommerce.Domain\LogiCommerce.Domain.csproj" />
+      <ProjectReference Include="..\LogiCommerce.SharedKernel\LogiCommerce.SharedKernel.csproj" />
+    </ItemGroup>
+
 </Project>

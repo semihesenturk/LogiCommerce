@@ -10,14 +10,12 @@ public class Product
     [Required]
     [MaxLength(200)]
     public string Title { get; set; }
-
     public string Description { get; set; }
-
     public int StockQuantity { get; set; }
-
     public int CategoryId { get; set; }
-    public Category Category { get; set; }  // Category ilişkisi
-
-    // Product'un canlı olup olmadığı kontrolü
+    
+    public Category Category { get; set; } 
+    
     public bool IsLive => StockQuantity >= Category?.MinStockLevel;
+    
 }
