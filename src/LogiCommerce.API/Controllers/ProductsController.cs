@@ -2,6 +2,7 @@ using LogiCommerce.Application.Product.Commands.CreateProduct;
 using LogiCommerce.Application.Product.Commands.DeleteProduct;
 using LogiCommerce.Application.Product.Commands.SetProductLiveStatus;
 using LogiCommerce.Application.Product.Commands.UpdateProduct;
+using LogiCommerce.Application.Product.Commands.UpdateProductCategory;
 using LogiCommerce.Application.Product.Queries.GetProductById;
 using LogiCommerce.Application.Product.Queries.GetProductsByKeywordOrMinMaxStock;
 using LogiCommerce.SharedKernel.BaseClasses;
@@ -42,7 +43,16 @@ public class ProductsController(IMediator mediator) : CustomBaseController
             return BadRequest("Product ID in the URL does not match the body.");
 
         var result = await mediator.Send(command, cancellationToken);
+        return CreateActionResultInstance(result);
+    }
+    
+    [HttpPut("{id}/category")]
+    public async Task<IActionResult> UpdateProductCategory(Guid id, [FromBody] UpdateProductCategoryCommand command, CancellationToken cancellationToken)
+    {
+        if (id != command.ProductId)
+            return BadRequest("Product ID mismatch");
 
+        var result = await mediator.Send(command, cancellationToken);
         return CreateActionResultInstance(result);
     }
 

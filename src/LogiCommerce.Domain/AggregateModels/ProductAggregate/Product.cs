@@ -27,4 +27,10 @@ public class Product : BaseEntity, IAggregateRoot
     {
         IsLive = status;
     }
+
+    public void UpdateCategory(Guid categoryId)
+    {
+        CategoryId = categoryId;
+        UpdatedOn = DateTime.UtcNow;
+    }
 }
