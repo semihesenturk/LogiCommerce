@@ -16,10 +16,15 @@ public class Product : BaseEntity, IAggregateRoot
     
     public Category Category { get; set; } 
     
-    public bool IsLive => StockQuantity >= Category?.MinStockLevel;
+    public bool IsLive { get; protected set; }
     
     public void Delete()
     {
         DeletedOn = DateTime.Now;
+    }
+
+    public void SetLiveStatus(bool status)
+    {
+        IsLive = status;
     }
 }

@@ -1,5 +1,6 @@
 using LogiCommerce.Application.Product.Commands.CreateProduct;
 using LogiCommerce.Application.Product.Commands.DeleteProduct;
+using LogiCommerce.Application.Product.Commands.SetProductLiveStatus;
 using LogiCommerce.Application.Product.Commands.UpdateProduct;
 using LogiCommerce.Application.Product.Queries.GetProductsByKeywordOrMinMaxStock;
 using LogiCommerce.SharedKernel.BaseClasses;
@@ -33,6 +34,13 @@ public class ProductsController(IMediator mediator) : CustomBaseController
 
         var result = await mediator.Send(command, cancellationToken);
 
+        return CreateActionResultInstance(result);
+    }
+    
+    [HttpPut("{productId}/live")]
+    public async Task<IActionResult> SetProductLiveStatus(Guid productId, CancellationToken cancellationToken)
+    {
+        var result = await mediator.Send(new SetProductLiveStatusCommand { ProductId = productId }, cancellationToken);
         return CreateActionResultInstance(result);
     }
     

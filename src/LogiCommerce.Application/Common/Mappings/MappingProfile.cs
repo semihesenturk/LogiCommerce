@@ -11,7 +11,8 @@ public class MappingProfile : Profile
     public MappingProfile()
     {
         CreateMap<Domain.AggregateModels.ProductAggregate.Product, GetProductsQueryDto>()
-            .ForMember(dest => dest.CategoryName, opt => opt.MapFrom(src => src.Category.Name));
+            .ForMember(dest => dest.CategoryName, opt => opt.MapFrom(src => src.Category.Name))
+            .ForMember(dest => dest.IsLive, opt => opt.MapFrom(src => src.StockQuantity >= src.Category.MinStockLevel));
 
         CreateMap<Domain.AggregateModels.CategoryAggregate.Category, GetCategoriesQueryDto>()
             .ReverseMap();
