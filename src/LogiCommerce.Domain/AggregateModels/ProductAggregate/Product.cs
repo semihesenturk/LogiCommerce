@@ -1,10 +1,11 @@
 using System.ComponentModel.DataAnnotations;
 using LogiCommerce.Domain.AggregateModels.CategoryAggregate;
 using LogiCommerce.Domain.Generics;
+using LogiCommerce.SharedKernel.MarkupInterfaces;
 
 namespace LogiCommerce.Domain.AggregateModels.ProductAggregate;
 
-public class Product : BaseEntity
+public class Product : BaseEntity, IAggregateRoot
 {
     [Required]
     [MaxLength(200)]

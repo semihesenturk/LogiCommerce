@@ -10,4 +10,8 @@
       <PackageReference Include="Ardalis.Specification" Version="9.0.1" />
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\LogiCommerce.SharedKernel\LogiCommerce.SharedKernel.csproj" />
+    </ItemGroup>
+
 </Project>
