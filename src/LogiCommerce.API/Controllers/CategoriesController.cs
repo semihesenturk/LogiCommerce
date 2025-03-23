@@ -1,5 +1,6 @@
 using LogiCommerce.Application.Category.Commands.CreateCategory;
 using LogiCommerce.Application.Category.Queries.GetCategories;
+using LogiCommerce.Application.Category.Queries.GetCategoryProducts;
 using LogiCommerce.SharedKernel.BaseClasses;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
@@ -12,6 +13,13 @@ public class CategoriesController(IMediator mediator) : CustomBaseController
     public async Task<IActionResult> GetCategories(CancellationToken cancellationToken)
     {
         var result = await mediator.Send(new GetCategoriesQuery(), cancellationToken);
+        return CreateActionResultInstance(result);
+    }
+    
+    [HttpGet("{categoryId}/products")]
+    public async Task<IActionResult> GetCategoryWithProducts(Guid categoryId, CancellationToken cancellationToken)
+    {
+        var result = await mediator.Send(new GetCategoryWithProductsQuery(categoryId), cancellationToken);
         return CreateActionResultInstance(result);
     }
 

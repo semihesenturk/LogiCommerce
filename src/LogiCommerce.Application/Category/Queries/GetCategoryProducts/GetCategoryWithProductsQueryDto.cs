@@ -1,14 +1,14 @@
-namespace LogiCommerce.Application.Category.Queries.GetCategories;
+namespace LogiCommerce.Application.Category.Queries.GetCategoryProducts;
 
-public class GetCategoriesQueryDto
+public class GetCategoryWithProductsQueryDto
 {
     public Guid Id { get; set; }
     public string Name { get; set; }
     public int MinStockLevel { get; set; } 
-    public List<ProductDto> Products { get; set; } = [];
+    public List<GetCategoryWithProductsProductDto> Products { get; set; } = new();
 }
 
-public class ProductDto
+public class GetCategoryWithProductsProductDto
 {
     public Guid Id { get; set; }
     public string Title { get; set; }
