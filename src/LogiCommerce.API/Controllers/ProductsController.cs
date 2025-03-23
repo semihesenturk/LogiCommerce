@@ -1,4 +1,5 @@
 using LogiCommerce.Application.Product.Commands.CreateProduct;
+using LogiCommerce.Application.Product.Commands.DeleteProduct;
 using LogiCommerce.Application.Product.Queries.GetProductsByKeywordOrMinMaxStock;
 using LogiCommerce.SharedKernel.BaseClasses;
 using MediatR;
@@ -21,6 +22,13 @@ public class ProductsController(IMediator mediator) : CustomBaseController
     public async Task<IActionResult> Create(CreateProductCommand request, CancellationToken cancellationToken)
     {
         var result = await mediator.Send(request, cancellationToken);
+        return CreateActionResultInstance(result);
+    }
+    
+    [HttpDelete("{productId}")]
+    public async Task<IActionResult> DeleteProduct(Guid productId, CancellationToken cancellationToken)
+    {
+        var result = await mediator.Send(new DeleteProductCommand{ProductId = productId}, cancellationToken);
         return CreateActionResultInstance(result);
     }
 }

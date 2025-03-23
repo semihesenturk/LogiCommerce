@@ -18,4 +18,8 @@ public class Product : BaseEntity, IAggregateRoot
     
     public bool IsLive => StockQuantity >= Category?.MinStockLevel;
     
+    public void Delete()
+    {
+        DeletedOn = DateTime.Now;
+    }
 }
