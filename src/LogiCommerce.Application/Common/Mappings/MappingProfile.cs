@@ -1,6 +1,7 @@
 using AutoMapper;
 using LogiCommerce.Application.Category.Queries.GetCategories;
 using LogiCommerce.Application.Category.Queries.GetCategoryProducts;
+using LogiCommerce.Application.Product.Commands.UpdateProduct;
 using LogiCommerce.Application.Product.Queries.GetProductsByKeywordOrMinMaxStock;
 
 namespace LogiCommerce.Application.Common.Mappings;
@@ -19,5 +20,6 @@ public class MappingProfile : Profile
         
         CreateMap<Domain.AggregateModels.CategoryAggregate.Category, GetCategoryWithProductsQueryDto>();
         CreateMap<Domain.AggregateModels.ProductAggregate.Product, GetCategoryWithProductsProductDto>();
+        CreateMap<Domain.AggregateModels.ProductAggregate.Product, UpdateProductCommandDto>();
     }
 }
