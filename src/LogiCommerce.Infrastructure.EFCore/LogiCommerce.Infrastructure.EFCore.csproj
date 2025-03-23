@@ -12,8 +12,8 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\src\LogiCommerce.Domain\LogiCommerce.Domain.csproj" />
-      <ProjectReference Include="..\src\LogiCommerce.SharedKernel\LogiCommerce.SharedKernel.csproj" />
+      <ProjectReference Include="..\LogiCommerce.Domain\LogiCommerce.Domain.csproj" />
+      <ProjectReference Include="..\LogiCommerce.SharedKernel\LogiCommerce.SharedKernel.csproj" />
     </ItemGroup>
 
 </Project>

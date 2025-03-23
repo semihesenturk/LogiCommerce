@@ -13,8 +13,8 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\LogiCommerce.Infrastructure.EFCore\LogiCommerce.Infrastructure.EFCore.csproj" />
       <ProjectReference Include="..\LogiCommerce.Application\LogiCommerce.Application.csproj" />
+      <ProjectReference Include="..\LogiCommerce.Infrastructure.EFCore\LogiCommerce.Infrastructure.EFCore.csproj" />
     </ItemGroup>
 
 </Project>
