@@ -16,7 +16,7 @@ public class Product : BaseEntity, IAggregateRoot
     
     public Category Category { get; set; } 
     
-    public bool IsLive { get; protected set; }
+    public bool IsLive { get; set; }
     
     public void Delete()
     {

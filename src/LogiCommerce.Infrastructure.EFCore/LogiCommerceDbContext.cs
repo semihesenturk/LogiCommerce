@@ -20,12 +20,12 @@ public void Seed()
                 new Category
                 {
                     Name = "Electronics",
-                    MinStockLevel = 10
+                    MinStockLevel = 20
                 },
                 new Category
                 {
                     Name = "Clothing",
-                    MinStockLevel = 20
+                    MinStockLevel = 30
                 }
             );
 
@@ -43,35 +43,40 @@ public void Seed()
                     Title = "Laptop",
                     Description = "A powerful laptop",
                     StockQuantity = 50,
-                    CategoryId = electronicsCategory.Id
+                    CategoryId = electronicsCategory.Id,
+                    IsLive = false
                 },
                 new Product
                 {
                     Title = "Smartphone",
                     Description = "Latest model smartphone",
                     StockQuantity = 100,
-                    CategoryId = electronicsCategory.Id
+                    CategoryId = electronicsCategory.Id,
+                    IsLive = false
                 },
                 new Product
                 {
                     Title = "Headphones",
                     Description = "Noise cancelling headphones",
                     StockQuantity = 30,
-                    CategoryId = electronicsCategory.Id
+                    CategoryId = electronicsCategory.Id,
+                    IsLive = false
                 },
                 new Product
                 {
                     Title = "Smartwatch",
                     Description = "Wearable tech smartwatch",
                     StockQuantity = 20,
-                    CategoryId = electronicsCategory.Id
+                    CategoryId = electronicsCategory.Id,
+                    IsLive = false
                 },
                 new Product
                 {
                     Title = "Tablet",
                     Description = "10-inch tablet",
                     StockQuantity = 15,
-                    CategoryId = electronicsCategory.Id
+                    CategoryId = electronicsCategory.Id,
+                    IsLive = false
                 },
                 
                 new Product
@@ -79,35 +84,40 @@ public void Seed()
                     Title = "T-shirt",
                     Description = "Comfortable cotton t-shirt",
                     StockQuantity = 150,
-                    CategoryId = clothingCategory.Id
+                    CategoryId = clothingCategory.Id,
+                    IsLive = false
                 },
                 new Product
                 {
                     Title = "Jeans",
                     Description = "Stylish denim jeans",
                     StockQuantity = 200,
-                    CategoryId = clothingCategory.Id
+                    CategoryId = clothingCategory.Id,
+                    IsLive = false
                 },
                 new Product
                 {
                     Title = "Jacket",
                     Description = "Warm winter jacket",
                     StockQuantity = 60,
-                    CategoryId = clothingCategory.Id
+                    CategoryId = clothingCategory.Id,
+                    IsLive = false
                 },
                 new Product
                 {
                     Title = "Sneakers",
                     Description = "Comfortable running shoes",
                     StockQuantity = 80,
-                    CategoryId = clothingCategory.Id
+                    CategoryId = clothingCategory.Id,
+                    IsLive = false
                 },
                 new Product
                 {
                     Title = "Hat",
                     Description = "Stylish summer hat",
                     StockQuantity = 40,
-                    CategoryId = clothingCategory.Id
+                    CategoryId = clothingCategory.Id,
+                    IsLive = false
                 }
             );
 

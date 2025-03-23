@@ -7,10 +7,13 @@ using MediatR;
 
 namespace LogiCommerce.Application.Product.Commands.SetProductLiveStatus;
 
-public class SetProductLiveStatusCommandHandler(IProductRepository productRepository, ICategoryRepository categoryRepository) 
+public class SetProductLiveStatusCommandHandler(
+    IProductRepository productRepository,
+    ICategoryRepository categoryRepository)
     : IRequestHandler<SetProductLiveStatusCommand, BaseServiceResponse<bool>>
 {
-    public async Task<BaseServiceResponse<bool>> Handle(SetProductLiveStatusCommand request, CancellationToken cancellationToken)
+    public async Task<BaseServiceResponse<bool>> Handle(SetProductLiveStatusCommand request,
+        CancellationToken cancellationToken)
     {
         var getProductByIdSpecification = new GetProductByIdSpecification(request.ProductId);
         var product = await productRepository.FirstOrDefaultAsync(getProductByIdSpecification, cancellationToken);
@@ -30,7 +33,8 @@ public class SetProductLiveStatusCommandHandler(IProductRepository productReposi
         // If all checks pass, set the product to live
         product.SetLiveStatus(true);
         await productRepository.UpdateAsync(product, cancellationToken);
+        var result = await productRepository.UnitOfWork.SaveChangesAsync(cancellationToken);
 
-        return BaseServiceResponse<bool>.Success(true, 200);
+        return BaseServiceResponse<bool>.Success(result > 0, 200);
     }
 }

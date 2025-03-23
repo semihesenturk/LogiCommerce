@@ -32,7 +32,8 @@ public class CreateProductCommandHandler(IProductRepository productRepository, I
             Title = request.Title,
             Description = request.Description,
             StockQuantity = request.StockQuantity,
-            CategoryId = request.CategoryId
+            CategoryId = request.CategoryId,
+            IsLive = false
         };
 
         await productRepository.AddAsync(product, cancellationToken);
