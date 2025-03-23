@@ -42,4 +42,9 @@ public class RepositoryBase<T>(LogiCommerceDbContext context, IUnitOfWork unitOf
     {
         return SpecificationEvaluator.Default.GetQuery(_dbSet.AsQueryable(), spec);
     }
+    
+    public async Task<T> FirstOrDefaultAsync(ISpecification<T> spec, CancellationToken cancellationToken = default)
+    {
+        return await ApplySpecification(spec).FirstOrDefaultAsync(cancellationToken);
+    }
 }

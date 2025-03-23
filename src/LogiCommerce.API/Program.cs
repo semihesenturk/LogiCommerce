@@ -1,5 +1,7 @@
+using FluentValidation.AspNetCore;
 using LogiCommerce.Application;
 using LogiCommerce.Application.Common.Mappings;
+using LogiCommerce.Application.Product.Commands.CreateProduct;
 using LogiCommerce.Domain.AggregateModels.CategoryAggregate;
 using LogiCommerce.Domain.AggregateModels.ProductAggregate;
 using LogiCommerce.Domain.Generics;
@@ -21,6 +23,9 @@ builder.Services.AddSwaggerGen();
 
 //Add MediatR
 builder.Services.AddMediatR(typeof(Program).Assembly);
+
+//Add FluentValidation
+builder.Services.AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<CreateProductCommandValidator>());
 
 //Add AutoMapper
 builder.Services.AddAutoMapper(typeof(ProductProfile));

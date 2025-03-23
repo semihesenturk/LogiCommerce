@@ -7,10 +7,6 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="AggregateModels\CategoryAggregate\Specification\" />
-    </ItemGroup>
-
-    <ItemGroup>
       <PackageReference Include="Ardalis.Specification" Version="9.0.1" />
     </ItemGroup>
 
