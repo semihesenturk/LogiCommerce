@@ -18,22 +18,22 @@ public class RepositoryBase<T>(LogiCommerceDbContext context, IUnitOfWork unitOf
         return await _dbSet.FindAsync(id);
     }
 
-    public async Task<IEnumerable<T>> ListAsync(ISpecification<T> spec)
+    public async Task<IEnumerable<T>> ListAsync(ISpecification<T> spec, CancellationToken cancellationToken = default)
     {
         return await ApplySpecification(spec).ToListAsync();
     }
 
-    public async Task AddAsync(T entity)
+    public async Task AddAsync(T entity, CancellationToken cancellationToken = default)
     {
         _dbSet.Add(entity);
     }
 
-    public async Task UpdateAsync(T entity)
+    public async Task UpdateAsync(T entity, CancellationToken cancellationToken = default)
     {
         _dbSet.Update(entity);
     }
 
-    public async Task DeleteAsync(T entity)
+    public async Task DeleteAsync(T entity, CancellationToken cancellationToken = default)
     {
         _dbSet.Remove(entity);
     }

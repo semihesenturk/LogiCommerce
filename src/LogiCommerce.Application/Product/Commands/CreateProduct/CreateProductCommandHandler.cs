@@ -2,7 +2,7 @@ using LogiCommerce.Domain.AggregateModels.ProductAggregate;
 using LogiCommerce.SharedKernel.BaseClasses;
 using MediatR;
 
-namespace LogiCommerce.Application.Product.Commands;
+namespace LogiCommerce.Application.Product.Commands.CreateProduct;
 
 public class CreateProductCommandHandler(IProductRepository productRepository) : IRequestHandler<CreateProductCommand, BaseServiceResponse<CreateProductCommandDto>>
 {
@@ -16,8 +16,8 @@ public class CreateProductCommandHandler(IProductRepository productRepository) :
             CategoryId = request.CategoryId
         };
 
-        await productRepository.AddAsync(product);
-        var result = await productRepository.UnitOfWork.SaveChangesAsync();
+        await productRepository.AddAsync(product, cancellationToken);
+        var result = await productRepository.UnitOfWork.SaveChangesAsync(cancellationToken);
 
         return result == 0
             ? BaseServiceResponse<CreateProductCommandDto>.Success(

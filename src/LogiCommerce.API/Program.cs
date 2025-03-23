@@ -1,4 +1,6 @@
 using LogiCommerce.Application;
+using LogiCommerce.Application.Common.Mappings;
+using LogiCommerce.Domain.AggregateModels.CategoryAggregate;
 using LogiCommerce.Domain.AggregateModels.ProductAggregate;
 using LogiCommerce.Domain.Generics;
 using LogiCommerce.Infrastructure.EFCore;
@@ -17,7 +19,11 @@ builder.Services.AddApplicationServices();
 builder.Services.AddEndpointsApiExplorer(); 
 builder.Services.AddSwaggerGen(); 
 
+//Add MediatR
 builder.Services.AddMediatR(typeof(Program).Assembly);
+
+//Add AutoMapper
+builder.Services.AddAutoMapper(typeof(ProductProfile));
 
 //Add Inmemory Db
 builder.Services.AddDbContext<LogiCommerceDbContext>(options =>
@@ -27,6 +33,7 @@ builder.Services.AddDbContext<LogiCommerceDbContext>(options =>
 builder.Services.AddScoped(typeof(IRepository<>), typeof(RepositoryBase<>));
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
+builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 
 
 builder.Services.AddControllers();

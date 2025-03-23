@@ -6,8 +6,11 @@ public class GetProductByKeywordSpecification : Specification<Product>
 {
     public GetProductByKeywordSpecification(string keyword)
     {
-        Query.Where(p => p.Title.Contains(keyword) ||
-                         p.Description.Contains(keyword) ||
-                         p.Category.Name.Contains(keyword));
+        var lowerKeyword = keyword.ToLower();
+        
+        Query.Include(p=>p.Category);
+        Query.Where(p => p.Title.ToLower().Contains(lowerKeyword) ||
+                         p.Description.ToLower().Contains(lowerKeyword) ||
+                         p.Category.Name.ToLower().Contains(lowerKeyword));
     }
 }

@@ -1,4 +1,4 @@
-namespace LogiCommerce.Application.Product.Commands;
+namespace LogiCommerce.Application.Product.Commands.CreateProduct;
 
 public class CreateProductCommandDto 
 {

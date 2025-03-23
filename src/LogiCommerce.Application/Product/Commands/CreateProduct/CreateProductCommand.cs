@@ -1,7 +1,7 @@
 using LogiCommerce.SharedKernel.BaseClasses;
 using MediatR;
 
-namespace LogiCommerce.Application.Product.Commands;
+namespace LogiCommerce.Application.Product.Commands.CreateProduct;
 
 public class CreateProductCommand : IRequest<BaseServiceResponse<CreateProductCommandDto>>
 {
