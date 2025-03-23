@@ -1,5 +1,5 @@
 using AutoMapper;
-using LogiCommerce.Application.Product.Queries.GetProductsByKeyword;
+using LogiCommerce.Application.Product.Queries.GetProductsByKeywordOrMinMaxStock;
 
 namespace LogiCommerce.Application.Common.Mappings;
 

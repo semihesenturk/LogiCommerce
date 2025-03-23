@@ -1,4 +1,4 @@
-namespace LogiCommerce.Application.Product.Queries.GetProductsByKeyword;
+namespace LogiCommerce.Application.Product.Queries.GetProductsByKeywordOrMinMaxStock;
 
 public class GetProductsByKeywordQueryDto
 {
