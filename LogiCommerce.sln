@@ -14,6 +14,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{732606FF-1
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogiCommerce.SharedKernel", "src\LogiCommerce.SharedKernel\LogiCommerce.SharedKernel.csproj", "{BA1464BB-625B-45DA-BCF2-A4F11B4D051B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogiCommerce.Test", "src\LogiCommerce.Test\LogiCommerce.Test.csproj", "{343AA07B-3971-4DA5-BA3C-19768A271A1A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -40,8 +42,13 @@ Global
 		{BA1464BB-625B-45DA-BCF2-A4F11B4D051B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BA1464BB-625B-45DA-BCF2-A4F11B4D051B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BA1464BB-625B-45DA-BCF2-A4F11B4D051B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{343AA07B-3971-4DA5-BA3C-19768A271A1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{343AA07B-3971-4DA5-BA3C-19768A271A1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{343AA07B-3971-4DA5-BA3C-19768A271A1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{343AA07B-3971-4DA5-BA3C-19768A271A1A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{4B006BCD-C549-44FB-A43A-C5CA2D65B414} = {224C0641-8468-4D5D-92E7-0C36CACD2702}
+		{343AA07B-3971-4DA5-BA3C-19768A271A1A} = {732606FF-1EDA-42CA-B814-0E6809D073E0}
 	EndGlobalSection
 EndGlobal
