@@ -6,6 +6,6 @@ public class GetCategoryByIdSpecification : Specification<Category>
 {
     public GetCategoryByIdSpecification(Guid categoryId)
     {
-        Query.Where(category => category.Id == categoryId && category.DeletedOn != null);
+        Query.Where(category => category.Id == categoryId && category.DeletedOn == null);
     }
 }
