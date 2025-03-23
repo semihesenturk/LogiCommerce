@@ -5,4 +5,14 @@
   &lt;TestAncestor&gt;
     &lt;TestId&gt;xUnit::343AA07B-3971-4DA5-BA3C-19768A271A1A::net9.0::LogiCommerce.Tests.ProductRepositoryTests.AddProduct_Should_Add_Product_Successfully&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=aa8a844c_002D1adf_002D48c5_002Dbbe8_002Dd3181205a9fe/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="should_return_error_if_category_does_not_exist #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::343AA07B-3971-4DA5-BA3C-19768A271A1A::net9.0::LogiCommerce.Test.Product.AddProductTests.should_return_error_if_category_does_not_exist&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=f028d3e6_002D7d7c_002D4c00_002Daf75_002D0fe4ce85eaae/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="should_return_error_if_category_does_not_exist" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::343AA07B-3971-4DA5-BA3C-19768A271A1A::net9.0::LogiCommerce.Test.Product.AddProductTests&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

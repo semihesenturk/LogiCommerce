@@ -17,8 +17,4 @@
       <ProjectReference Include="..\LogiCommerce.Domain\LogiCommerce.Domain.csproj" />
     </ItemGroup>
 
-    <ItemGroup>
-      <Folder Include="Product\" />
-    </ItemGroup>
-
 </Project>
