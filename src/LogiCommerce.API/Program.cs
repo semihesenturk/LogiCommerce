@@ -28,7 +28,7 @@ builder.Services.AddMediatR(typeof(Program).Assembly);
 builder.Services.AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<CreateProductCommandValidator>());
 
 //Add AutoMapper
-builder.Services.AddAutoMapper(typeof(ProductProfile));
+builder.Services.AddAutoMapper(typeof(MappingProfile));
 
 //Add Inmemory Db
 builder.Services.AddDbContext<LogiCommerceDbContext>(options =>
